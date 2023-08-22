@@ -1,0 +1,696 @@
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+// <!-- Header Start -->
+.header-main {
+    width: 92%;
+    margin: auto;
+    margin-top: 50px;
+    @include flexbox(space-around);
+
+    .site-menu {
+        text-align: center;
+        display: flex;
+        padding-top: 20px;
+        margin-right: 60px;
+
+        ul {
+            display: flex;
+            gap: 50px;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: #221C26;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                    white-space: pre;
+
+                    &:hover {
+                        color: $site-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+// <!-- Header End -->
+
+// <!-- Hero section Start -->
+.hero-main {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+
+    h1 {
+        font-size: $heading-size;
+        line-height: 46px;
+        font-weight: 700;
+        color: $heading-color;
+    }
+
+    .image-content {
+        display: flex;
+        margin-top: 50px;
+        gap: 57px;
+        align-items: center;
+
+        .content {
+            width: 706px;
+
+            h2 {
+                text-align: left;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 38px;
+                margin-bottom: 26px;
+            }
+
+            p {
+                text-align: left;
+                font-size: $text-size;
+                font-weight: 400;
+                line-height: 30px;
+                color: $text-color;
+            }
+        }
+    }
+}
+
+// <!-- Hero section End -->
+
+// <!-- Why Trust Start -->
+.why-trust-main {
+    margin-top: 70px;
+    text-align: center;
+
+    h1 {
+        font-size: $heading-size;
+        font-weight: 700;
+        line-height: 38px;
+        color: $heading-color;
+    }
+
+    .cards-container {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        gap: 20px;
+        margin-top: 50px;
+
+        .card {
+            box-shadow: 0px 0px 15px rgba(179, 56, 255, 0.1);
+            align-items: center;
+            border: none;
+            width: 270px;
+            border-radius: 12px;
+
+            img {
+                width: 175px;
+                height: 175px;
+                margin: 20px 0px;
+            }
+
+            h5 {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 28px;
+                color: $site-color;
+            }
+
+            p {
+                font-size: $text-size;
+                font-weight: 400;
+                line-height: 26px;
+                color: #221C26;
+                width: 230px;
+            }
+        }
+    }
+}
+
+// <!-- Why Trust End -->
+
+// <!-- Make Money Start -->
+.how-make-money {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 100px auto 0px auto;
+    gap: 30px;
+
+    .heading-content {
+        h2 {
+            font-size: $heading-size;
+            line-height: 38px;
+            color: $heading-color;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: $text-size;
+            line-height: 30px;
+            color: $heading-color;
+            width: 727px;
+
+            span {
+                color: $site-color;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// <!-- Make Money End -->
+
+// <!-- Importent Note Start -->
+.importent-note {
+    display: flex;
+    margin: 100px auto 0px auto;
+    width: 66%;
+    justify-content: flex-start;
+    gap: 15px;
+    border: 2px solid $site-color;
+    padding: 33px 26px 16px;
+    border-radius: 8px;
+
+    .note-text {
+        p {
+            font-size: $text-size;
+            line-height: 26px;
+            font-weight: 400;
+            color: $primery-color;
+        }
+    }
+}
+
+// <!-- Importent Note End -->
+
+// <!-- Contact Form Start -->
+.contect-section {
+    margin: 100px auto;
+    width: 80%;
+
+    h2 {
+        font-size: $heading-size;
+        line-height: 38px;
+        font-weight: 600;
+        color: $heading-color;
+    }
+
+    p {
+        font-size: $text-size;
+        font-weight: 400;
+        line-height: 26px;
+        color: $primery-color;
+        width: 561px;
+    }
+
+    .contect-form-main {
+        gap: 20px;
+        @include flexbox(space-between);
+
+        .cotent-form {
+            button {
+                background-color: $site-color;
+                width: 271px;
+                height: 44px;
+                border-radius: 5px;
+                padding: 10px 25px;
+                font-size: $text-size;
+                font-weight: 600;
+                line-height: 24px;
+                text-align: center;
+                margin-top: 30px;
+                border: none;
+            }
+
+            form {
+                position: relative;
+
+                h6 {
+                    font-size: $text-size;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: $primery-color;
+                }
+
+                .name-email {
+                    display: flex;
+                    gap: 20px;
+
+                    .user-icon {
+                        position: absolute;
+                        top: 37px;
+                        left: 10px;
+                    }
+
+                    .mail-icon {
+                        position: absolute;
+                        top: 37px;
+                        left: 300px;
+                    }
+
+                    .name-box {
+                        width: 270px;
+                    }
+
+                    .text-field {
+                        width: 270px;
+                        border-radius: 6px;
+                        padding: 8px 12px;
+                        height: 40px;
+                        border: 1px solid #d9d9d9;
+                        color: #7E7287;
+
+                        &::placeholder {
+                            padding-left: 20px;
+                            font-size: $text-size;
+                            line-height: 24px;
+                            font-weight: 400;
+                            color: #7E7287;
+                        }
+
+                        &active-placeholder::placeholder {
+                            color: $site-color;
+                        }
+                    }
+                }
+
+                .massage {
+                    margin-top: 20px;
+
+                    .massage-field {
+                        width: 561px;
+                        height: 140px;
+                        border: 1px solid #d9d9d9;
+                        color: #7E7287;
+                        border-radius: 6px;
+
+                        &::placeholder {
+                            padding-left: 20px;
+                            font-size: $text-size;
+                            line-height: 24px;
+                            font-weight: 400;
+                            color: #7E7287;
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// <!-- Contact Form End -->
+
+// Risponsivnes
+@media screen and (max-width: 1025px) {
+    .header-main {
+        .site-logo {
+            width: 122.5px;
+            height: 56px;
+        }
+
+        .site-menu {
+            margin: 0;
+
+            ul {
+                gap: 30px;
+
+                li {
+                    a {
+                        font-size: $text-size;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-main {
+        h1 {
+            font-size: $tab-h1;
+            line-height: 29.8px;
+        }
+
+        .image-content {
+            .hero-image {
+                width: 199px;
+                height: 151px;
+            }
+
+            .content {
+                h2 {
+                    font-size: $tab-h2;
+                    line-height: 27.53px;
+                }
+
+                p {
+                    font-size: $tab-size;
+                    line-height: 21.74px;
+                    width: 477px;
+                }
+            }
+
+        }
+    }
+
+    .why-trust-main {
+        h1 {
+            font-size: $tab-h1;
+            line-height: 24.1px;
+        }
+
+        .cards-container {
+            width: 70%;
+
+            .card {
+                width: 166px;
+
+                .card-image {
+                    width: 111px;
+                    height: 111px;
+                }
+
+                h5 {
+                    font-size: $tab-size;
+                    line-height: 17.76px;
+                }
+
+                p {
+                    font-size: 9px;
+                    line-height: 16.49px;
+                    width: 145px;
+                }
+            }
+        }
+    }
+
+    .how-make-money {
+        width: 70%;
+
+        .make-money-image {
+            width: 227px;
+            height: 168.19px;
+        }
+
+        .heading-content {
+            h2 {
+                font-size: 24px;
+                line-height: 24px;
+            }
+
+            p {
+                font-size: $tab-size;
+                line-height: 30px;
+                width: 465px;
+            }
+        }
+    }
+
+    .importent-note {
+        width: 70%;
+    }
+
+    .contect-section {
+        h2 {
+            font-size: $tab-h1;
+        }
+
+        p {
+            width: 415px;
+        }
+
+        .contect-form-main {
+            width: 70%;
+
+            .form-image {
+                width: 290px;
+                height: 204px;
+            }
+
+            .cotent-form {
+                form {
+                    h6 {
+                        font-size: $tab-size;
+                    }
+
+                    .name-email {
+                        gap: 56px;
+
+                        .mail-icon {
+                            left: 259px;
+                        }
+
+                        .name-box {
+                            width: 193px;
+                        }
+
+                        .text-field {
+                            width: 193px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+
+                    .massage {
+                        .massage-field {
+                            width: 441px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-main {
+        .site-logo {
+            width: 109.38px;
+            height: 50px;
+        }
+
+        .site-menu {
+            ul {
+                li {
+                    a {
+                        font-size: $tab-size;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+    .importent-note {
+        width: 72%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-main {
+        .site-logo {
+            width: 81px;
+            height: 37.03px;
+        }
+
+        .site-menu {
+            ul {
+                gap: 20px;
+
+                li {
+                    a {
+                        font-size: 10px;
+                        line-height: 22px;
+                    }
+
+                    .profile-icon {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+
+        .social-icons {
+            .social-icon {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .hero-main {
+        .image-content {
+            flex-direction: column-reverse;
+
+            .hero-image {
+                width: 302px;
+                height: 226.4px;
+            }
+
+            .content {
+                width: 70%;
+            }
+        }
+    }
+
+    .why-trust-main {
+        h1 {
+            font-size: 24px;
+            line-height: 24.1px;
+        }
+
+        .cards-container {
+            width: 78%;
+
+            .card {
+                width: 142px;
+
+                .card-image {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                h5 {
+                    font-size: 10.42px;
+                    line-height: 15.42px;
+                }
+
+                p {
+                    font-size: 7px;
+                    line-height: 14.32px;
+                    width: 113px;
+                }
+            }
+        }
+    }
+
+    .how-make-money {
+        width: 78%;
+        display: flex;
+        flex-direction: column-reverse;
+
+        .make-money-image {
+            width: 294.23px;
+            height: 218px;
+        }
+
+        .heading-content {
+            h2 {
+                font-size: $tab-h1;
+                line-height: 38px;
+            }
+
+            p {
+                font-size: $tab-size;
+                line-height: 30px;
+                width: 465px;
+
+                span {
+                    font-size: $tab-size;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .importent-note {
+        width: 82%;
+
+        .note-text {
+            p {
+                font-size: $tab-size;
+            }
+        }
+    }
+
+    .contect-section {
+        h2 {
+            font-size: 24px;
+            line-height: 38px;
+        }
+
+        p {
+            width: 520px;
+        }
+
+        .contect-form-main {
+            margin-top: 30px;
+            width: 70%;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+
+            .form-image {
+                width: 290px;
+                height: 204px;
+            }
+
+            .cotent-form {
+                form {
+
+                    h6 {
+                        font-size: $tab-size;
+                    }
+
+                    .name-email {
+                        gap: 28px;
+
+                        .mail-icon {
+                            left: 232px;
+                        }
+
+                        .name-box {
+                            width: 193px;
+                        }
+
+                        .text-field {
+                            width: 193px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+
+                    .massage {
+                        .massage-field {
+                            width: 414px;
+                            height: 114px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

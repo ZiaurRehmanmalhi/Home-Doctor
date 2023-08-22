@@ -1,0 +1,16 @@
+$site-color: #B338FF;
+$heading-color: #000000;
+$text-color: #2A2F32;
+$primery-color: #221C26;
+$heading-size: 32px;
+$text-size: 14px;
+$tab-size: 12px;
+$tab-h1: 28px;
+$tab-h2: 18px;
+
+// flexbox function
+@mixin flexbox($jc:center,$ai:center){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
