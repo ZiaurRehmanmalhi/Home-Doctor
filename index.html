@@ -27,10 +27,20 @@
                 <li><img class="profile-icon" src="/site-images/profile-icon.svg" alt=""></li>
             </ul>
         </div>
+        <div class="menu-button">
+            <button><img src="/site-images/menu button.svg" alt=""></button>
+        </div>
         <div class="social-icons">
             <div><img class="social-icon" src="/site-images/Instagram icon.svg" alt=""></div>
             <div><img class="social-icon" src="/site-images/twiter icon.svg" alt=""></div>
             <div><img class="social-icon" src="/site-images/facebook icon.svg" alt=""></div>
+        </div>
+        <div class="dropdown-menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">Themes</a></li>
+            <li><a href="">Future Products</a></li>
+            <li><a href="">About US</a></li>
         </div>
     </div>
     <!-- Header End -->
@@ -124,8 +134,8 @@
     <!-- Contact Form Start -->
     <div class="contect-section">
         <div>
-        <h2>Contact us</h2>
-        <p>If you have any additional questions or suggestings, don’t hesitate to leave your message here</p>
+            <h2>Contact us</h2>
+            <p>If you have any additional questions or suggestings, don’t hesitate to leave your message here</p>
         </div>
         <div class="contect-form-main">
             <div class="cotent-form">
@@ -153,6 +163,16 @@
         </div>
     </div>
     <!-- Contact Form End -->
+
+    <script>
+        const toggleBtn = document.querySelector('.menu-button button');
+        const dropDownMenu = document.querySelector('.dropdown-menu');
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+        };
+
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

@@ -10,6 +10,7 @@
 
 // <!-- Header Start -->
 .header-main {
+    position: relative;
     width: 92%;
     margin: auto;
     margin-top: 50px;
@@ -44,12 +45,41 @@
         }
     }
 
+    .menu-button{
+        display: none;
+    }
+
     .social-icons {
         display: flex;
         gap: 20px;
     }
-}
 
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        right: 2rem;
+        top: 50px;
+        right: -20px;
+        width: 300px;
+        background: rgb(0 0 0 / 11%);
+        overflow: hidden;
+
+        li{
+            list-style: none;
+            padding: 0.7rem;
+            @include flexbox();
+
+            a{
+                text-decoration: none;
+                color: $heading-color;
+
+                &:hover {
+                    color: $site-color;
+                }
+            }
+        }
+    }
+}
 // <!-- Header End -->
 
 // <!-- Hero section Start -->
@@ -73,7 +103,7 @@
         align-items: center;
 
         .content {
-            width: 706px;
+            max-width: 706px;
 
             h2 {
                 text-align: left;
@@ -140,12 +170,11 @@
                 font-weight: 400;
                 line-height: 26px;
                 color: #221C26;
-                width: 230px;
+                max-width: 230px;
             }
         }
     }
 }
-
 // <!-- Why Trust End -->
 
 // <!-- Make Money Start -->
@@ -168,7 +197,7 @@
             font-size: $text-size;
             line-height: 30px;
             color: $heading-color;
-            width: 727px;
+            max-width: 727px;
 
             span {
                 color: $site-color;
@@ -177,7 +206,6 @@
         }
     }
 }
-
 // <!-- Make Money End -->
 
 // <!-- Importent Note Start -->
@@ -220,7 +248,7 @@
         font-weight: 400;
         line-height: 26px;
         color: $primery-color;
-        width: 561px;
+        max-width: 561px;
     }
 
     .contect-form-main {
@@ -230,7 +258,8 @@
         .cotent-form {
             button {
                 background-color: $site-color;
-                width: 271px;
+                max-width: 271px;
+                color: #ffff;
                 height: 44px;
                 border-radius: 5px;
                 padding: 10px 25px;
@@ -366,7 +395,7 @@
                 p {
                     font-size: $tab-size;
                     line-height: 21.74px;
-                    width: 477px;
+                    max-width: 477px;
                 }
             }
 
@@ -398,7 +427,7 @@
                 p {
                     font-size: 9px;
                     line-height: 16.49px;
-                    width: 145px;
+                    max-width: 145px;
                 }
             }
         }
@@ -421,7 +450,7 @@
             p {
                 font-size: $tab-size;
                 line-height: 30px;
-                width: 465px;
+                max-width: 465px;
             }
         }
     }
@@ -436,7 +465,7 @@
         }
 
         p {
-            width: 415px;
+            max-width: 415px;
         }
 
         .contect-form-main {
@@ -461,11 +490,11 @@
                         }
 
                         .name-box {
-                            width: 193px;
+                            max-width: 193px;
                         }
 
                         .text-field {
-                            width: 193px;
+                            max-width: 193px;
 
                             &::placeholder {
                                 font-size: $tab-size;
@@ -475,7 +504,7 @@
 
                     .massage {
                         .massage-field {
-                            width: 441px;
+                            max-width: 441px;
 
                             &::placeholder {
                                 font-size: $tab-size;
@@ -585,7 +614,7 @@
                 p {
                     font-size: 7px;
                     line-height: 14.32px;
-                    width: 113px;
+                    max-width: 113px;
                 }
             }
         }
@@ -610,7 +639,7 @@
             p {
                 font-size: $tab-size;
                 line-height: 30px;
-                width: 465px;
+                max-width: 465px;
 
                 span {
                     font-size: $tab-size;
@@ -637,18 +666,18 @@
         }
 
         p {
-            width: 520px;
+            max-width: 520px;
         }
 
         .contect-form-main {
             margin-top: 30px;
-            width: 70%;
+            max-width: 70%;
             display: flex;
             flex-direction: column-reverse;
             align-items: flex-start;
 
             .form-image {
-                width: 290px;
+                max-width: 290px;
                 height: 204px;
             }
 
@@ -681,7 +710,253 @@
 
                     .massage {
                         .massage-field {
-                            width: 414px;
+                            max-width: 414px;
+                            height: 114px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .header-main {
+        .site-logo {
+            width: 119px;
+            height: 54.4px;
+        }
+
+        .site-menu {
+            margin: 0;
+
+            ul {
+                display: none;
+            }
+        }
+        .menu-button{
+            display: block;
+        }
+
+        .social-icon{
+            display: none;
+        }
+
+        .dropdown-menu{
+            display: block;
+        }
+    }
+
+    .hero-main {
+        .image-content {
+            align-items: initial;
+
+            .hero-image {
+                width: 302px;
+                height: 226.4px;
+            }
+
+            .content {
+                width: 105%;
+
+                h2{
+                    font-size: 20px;
+                    line-height: 27.53px;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .why-trust-main {
+        h1 {
+            font-size: 28px;
+            line-height: 34.82px;
+        }
+
+        .cards-container {
+            flex-wrap: wrap;
+            width: 93%;
+
+            .card {
+                width: 252.82px;
+
+                .card-image {
+                    width: 147.89px;
+                    height: 120px;
+                }
+
+                h5 {
+                    font-size: 14.45px;
+                    line-height: 22.28px;
+                }
+
+                p {
+                    font-size: 11.56px;
+                    line-height: 20.69px;
+                    max-width: 225.58px;
+                }
+            }
+        }
+    }
+
+    .importent-note {
+        width: 91%;
+    }
+
+    .contect-section {
+        h2 {
+            font-size: 20px;
+            line-height: 38px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .hero-main {
+        h1{
+            font-size: 16px;
+            line-height: 29.8px;
+        }
+
+        .image-content {
+            .content {
+                width: auto;
+                
+                h2{
+                    font-size: 14px;
+                    line-height: 27.53px;
+                }
+
+                p{
+                    font-size: 10px;
+                    line-height: 21.74px;
+                }
+            }
+        }
+    }
+
+    .why-trust-main {
+        h1 {
+            font-size: 16px;
+            line-height: 24.1px;
+        }
+
+        .cards-container {
+            flex-wrap: wrap;
+            width: 93%;
+
+            .card {
+                width: 158px;
+
+                .card-image {
+                    width: 87.47px;
+                    height: 107px;
+                }
+
+                h5 {
+                    font-size: 9px;
+                    line-height: 14px;
+                }
+
+                p {
+                    font-size: 7px;
+                    line-height: 13px;
+                    max-width: 141.68px;
+                }
+            }
+        }
+    }
+
+    .how-make-money {
+        .heading-content {
+            h2 {
+                font-size: 14px;
+                line-height: 38px;
+            }
+
+            p {
+                font-size: 10px;
+                line-height: 24px;
+
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .importent-note {
+        width: 92%;
+
+        .note-text {
+            p {
+                font-size: 10px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .contect-section {
+        h2 {
+            font-size: 16px;
+            line-height: 38px;
+        }
+
+        p {
+            font-size: 10px;
+            line-height: 22px;
+        }
+
+        .contect-form-main {
+            .cotent-form {
+                button{
+                    padding: 4px 25px;
+                    width: 125px;
+                    height: 40px;
+                }
+                form {
+                    h6 {
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+
+                    .name-email {
+                        flex-direction: column;
+
+                        .mail-icon {
+                            left: 10px;
+                            top: 136px;
+                        }
+
+                        .name-box {
+                            width: 193px;
+                        }
+
+                        .text-field {
+                            width: 193px;
+
+                            &::placeholder {
+                                font-size: $tab-size;
+                            }
+                        }
+                    }
+
+                    .massage {
+                        .massage-field {
+                            max-width: 280px;
                             height: 114px;
 
                             &::placeholder {

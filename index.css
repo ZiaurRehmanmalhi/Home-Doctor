@@ -7,6 +7,7 @@
 }
 
 .header-main {
+  position: relative;
   width: 92%;
   margin: auto;
   margin-top: 50px;
@@ -38,9 +39,36 @@
 .header-main .site-menu ul li a:hover {
   color: #B338FF;
 }
+.header-main .menu-button {
+  display: none;
+}
 .header-main .social-icons {
   display: flex;
   gap: 20px;
+}
+.header-main .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50px;
+  right: -20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.11);
+  overflow: hidden;
+}
+.header-main .dropdown-menu li {
+  list-style: none;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-main .dropdown-menu li a {
+  text-decoration: none;
+  color: #000000;
+}
+.header-main .dropdown-menu li a:hover {
+  color: #B338FF;
 }
 
 .hero-main {
@@ -62,7 +90,7 @@
   align-items: center;
 }
 .hero-main .image-content .content {
-  width: 706px;
+  max-width: 706px;
 }
 .hero-main .image-content .content h2 {
   text-align: left;
@@ -119,7 +147,7 @@
   font-weight: 400;
   line-height: 26px;
   color: #221C26;
-  width: 230px;
+  max-width: 230px;
 }
 
 .how-make-money {
@@ -139,7 +167,7 @@
   font-size: 14px;
   line-height: 30px;
   color: #000000;
-  width: 727px;
+  max-width: 727px;
 }
 .how-make-money .heading-content p span {
   color: #B338FF;
@@ -178,7 +206,7 @@
   font-weight: 400;
   line-height: 26px;
   color: #221C26;
-  width: 561px;
+  max-width: 561px;
 }
 .contect-section .contect-form-main {
   gap: 20px;
@@ -188,7 +216,8 @@
 }
 .contect-section .contect-form-main .cotent-form button {
   background-color: #B338FF;
-  width: 271px;
+  max-width: 271px;
+  color: white;
   height: 44px;
   border-radius: 5px;
   padding: 10px 25px;
@@ -312,7 +341,7 @@
   .hero-main .image-content .content p {
     font-size: 12px;
     line-height: 21.74px;
-    width: 477px;
+    max-width: 477px;
   }
   .why-trust-main h1 {
     font-size: 28px;
@@ -335,7 +364,7 @@
   .why-trust-main .cards-container .card p {
     font-size: 9px;
     line-height: 16.49px;
-    width: 145px;
+    max-width: 145px;
   }
   .how-make-money {
     width: 70%;
@@ -351,7 +380,7 @@
   .how-make-money .heading-content p {
     font-size: 12px;
     line-height: 30px;
-    width: 465px;
+    max-width: 465px;
   }
   .importent-note {
     width: 70%;
@@ -360,7 +389,7 @@
     font-size: 28px;
   }
   .contect-section p {
-    width: 415px;
+    max-width: 415px;
   }
   .contect-section .contect-form-main {
     width: 70%;
@@ -379,10 +408,10 @@
     left: 259px;
   }
   .contect-section .contect-form-main .cotent-form form .name-email .name-box {
-    width: 193px;
+    max-width: 193px;
   }
   .contect-section .contect-form-main .cotent-form form .name-email .text-field {
-    width: 193px;
+    max-width: 193px;
   }
   .contect-section .contect-form-main .cotent-form form .name-email .text-field::-moz-placeholder {
     font-size: 12px;
@@ -391,7 +420,7 @@
     font-size: 12px;
   }
   .contect-section .contect-form-main .cotent-form form .massage .massage-field {
-    width: 441px;
+    max-width: 441px;
   }
   .contect-section .contect-form-main .cotent-form form .massage .massage-field::-moz-placeholder {
     font-size: 12px;
@@ -464,7 +493,7 @@
   .why-trust-main .cards-container .card p {
     font-size: 7px;
     line-height: 14.32px;
-    width: 113px;
+    max-width: 113px;
   }
   .how-make-money {
     width: 78%;
@@ -482,7 +511,7 @@
   .how-make-money .heading-content p {
     font-size: 12px;
     line-height: 30px;
-    width: 465px;
+    max-width: 465px;
   }
   .how-make-money .heading-content p span {
     font-size: 12px;
@@ -499,17 +528,17 @@
     line-height: 38px;
   }
   .contect-section p {
-    width: 520px;
+    max-width: 520px;
   }
   .contect-section .contect-form-main {
     margin-top: 30px;
-    width: 70%;
+    max-width: 70%;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
   }
   .contect-section .contect-form-main .form-image {
-    width: 290px;
+    max-width: 290px;
     height: 204px;
   }
   .contect-section .contect-form-main .cotent-form form h6 {
@@ -534,7 +563,186 @@
     font-size: 12px;
   }
   .contect-section .contect-form-main .cotent-form form .massage .massage-field {
-    width: 414px;
+    max-width: 414px;
+    height: 114px;
+  }
+  .contect-section .contect-form-main .cotent-form form .massage .massage-field::-moz-placeholder {
+    font-size: 12px;
+  }
+  .contect-section .contect-form-main .cotent-form form .massage .massage-field::placeholder {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header-main .site-logo {
+    width: 119px;
+    height: 54.4px;
+  }
+  .header-main .site-menu {
+    margin: 0;
+  }
+  .header-main .site-menu ul {
+    display: none;
+  }
+  .header-main .menu-button {
+    display: block;
+  }
+  .header-main .social-icon {
+    display: none;
+  }
+  .header-main .dropdown-menu {
+    display: block;
+  }
+  .hero-main .image-content {
+    align-items: initial;
+  }
+  .hero-main .image-content .hero-image {
+    width: 302px;
+    height: 226.4px;
+  }
+  .hero-main .image-content .content {
+    width: 105%;
+  }
+  .hero-main .image-content .content h2 {
+    font-size: 20px;
+    line-height: 27.53px;
+  }
+  .hero-main .image-content .content p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .why-trust-main h1 {
+    font-size: 28px;
+    line-height: 34.82px;
+  }
+  .why-trust-main .cards-container {
+    flex-wrap: wrap;
+    width: 93%;
+  }
+  .why-trust-main .cards-container .card {
+    width: 252.82px;
+  }
+  .why-trust-main .cards-container .card .card-image {
+    width: 147.89px;
+    height: 120px;
+  }
+  .why-trust-main .cards-container .card h5 {
+    font-size: 14.45px;
+    line-height: 22.28px;
+  }
+  .why-trust-main .cards-container .card p {
+    font-size: 11.56px;
+    line-height: 20.69px;
+    max-width: 225.58px;
+  }
+  .importent-note {
+    width: 91%;
+  }
+  .contect-section h2 {
+    font-size: 20px;
+    line-height: 38px;
+  }
+  .contect-section p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .hero-main h1 {
+    font-size: 16px;
+    line-height: 29.8px;
+  }
+  .hero-main .image-content .content {
+    width: auto;
+  }
+  .hero-main .image-content .content h2 {
+    font-size: 14px;
+    line-height: 27.53px;
+  }
+  .hero-main .image-content .content p {
+    font-size: 10px;
+    line-height: 21.74px;
+  }
+  .why-trust-main h1 {
+    font-size: 16px;
+    line-height: 24.1px;
+  }
+  .why-trust-main .cards-container {
+    flex-wrap: wrap;
+    width: 93%;
+  }
+  .why-trust-main .cards-container .card {
+    width: 158px;
+  }
+  .why-trust-main .cards-container .card .card-image {
+    width: 87.47px;
+    height: 107px;
+  }
+  .why-trust-main .cards-container .card h5 {
+    font-size: 9px;
+    line-height: 14px;
+  }
+  .why-trust-main .cards-container .card p {
+    font-size: 7px;
+    line-height: 13px;
+    max-width: 141.68px;
+  }
+  .how-make-money .heading-content h2 {
+    font-size: 14px;
+    line-height: 38px;
+  }
+  .how-make-money .heading-content p {
+    font-size: 10px;
+    line-height: 24px;
+  }
+  .how-make-money .heading-content p span {
+    font-size: 10px;
+  }
+  .importent-note {
+    width: 92%;
+  }
+  .importent-note .note-text p {
+    font-size: 10px;
+    line-height: 26px;
+  }
+  .contect-section h2 {
+    font-size: 16px;
+    line-height: 38px;
+  }
+  .contect-section p {
+    font-size: 10px;
+    line-height: 22px;
+  }
+  .contect-section .contect-form-main .cotent-form button {
+    padding: 4px 25px;
+    width: 125px;
+    height: 40px;
+  }
+  .contect-section .contect-form-main .cotent-form form h6 {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email {
+    flex-direction: column;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email .mail-icon {
+    left: 10px;
+    top: 136px;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email .name-box {
+    width: 193px;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email .text-field {
+    width: 193px;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email .text-field::-moz-placeholder {
+    font-size: 12px;
+  }
+  .contect-section .contect-form-main .cotent-form form .name-email .text-field::placeholder {
+    font-size: 12px;
+  }
+  .contect-section .contect-form-main .cotent-form form .massage .massage-field {
+    max-width: 280px;
     height: 114px;
   }
   .contect-section .contect-form-main .cotent-form form .massage .massage-field::-moz-placeholder {
